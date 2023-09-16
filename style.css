@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient( 94.3deg,  rgba(26,33,64,1) 10.9%, rgba(81,84,115,1) 87.1% );
+}
+
+.container{
+    /* background-color: rgba(254, 255, 255, 0.838); */
+    background-color: rgba(17, 16, 16, 0.727);
+    border: 1px solid black;
+    color: white;
+    border-radius: 15px;
+    padding: 2rem 1rem;
+    width: 540px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 0 15px 5px rgb(57, 135, 165);
+    word-wrap: break-word;
+}
+
+h1{
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(231, 66, 66);
+}
+
+form{
+    margin: 1.5rem 0;
+}
+
+input{
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    width: 80%;
+    border: 1px solid rgb(57, 135, 165);
+    box-shadow: 0 0 10px 1px rgb(156, 180, 189) ;
+}
+
+ul{
+    text-align: start;
+    font-size: 1.1rem; 
+}
+
+
+ul li{
+    cursor: pointer;
+    padding: 0.7rem;
+    margin-bottom: 7px;
+    position: relative;
+    list-style: none;
+    width: 100%;
+}
+
+
+ul li:before {
+    content: "📌";
+    padding: 0.6rem;
+    margin-right: 7px;
+
+}
+
+ul li:after{
+    opacity: 0;
+}
+
+ul li:hover:after{
+    content: " (Terminé)";
+    opacity: 0;
+    font-size: 1.1rem;
+    color: red;
+    font-style: italic;
+    animation: pseudoClassAnim 1s forwards;
+}
+li.checked:before{
+    content: "✅";
+    padding: 0.6rem;
+    padding: 10px 10px;
+    font-size: 1.1rem;
+}
+
+li.checked:hover:after{
+    content: " (Supprimer)";
+    font-size: 1.1rem;
+    color: red;
+    opacity: 0;
+}
+
+@keyframes pseudoClassAnim {
+    to {
+        opacity: 1;
+    }
+}
+
